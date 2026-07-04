@@ -23,12 +23,6 @@ jobs:
             - name: Build
               run: npm run build
             
-            - name: Check Build Artifacts
-              run: |
-                cd build
-                ls
-
-
             - name: Run Unit tests
               run: npm run test
             
