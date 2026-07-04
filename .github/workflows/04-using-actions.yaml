@@ -24,7 +24,10 @@ jobs:
               run: npm run build
             
             - name: Check Build Artifacts
-              run: ls
+              run: |
+                cd build
+                ls
+
 
             - name: Run Unit tests
               run: npm run test
@@ -33,6 +36,6 @@ jobs:
               uses: actions/upload-artifact@v7
               with:
                 name: react-build-artifacts
-                path: build
+                path: build/
 
             
