@@ -11,5 +11,5 @@ jobs:
         run: |-
             echo "This job is running on an ubuntu runner"
             echo "The runner OS is $RUNNER_OS"
-
+            echo "runner is ${{ runner.os }}"
         
