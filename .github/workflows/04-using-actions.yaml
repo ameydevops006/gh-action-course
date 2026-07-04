@@ -29,9 +29,10 @@ jobs:
             - name: Run Unit tests
               run: npm run test
             
-            # - name: Publish Build Artifacts
-            #   uses: actions/upload-artifact@v3
-            #   with:
-            #     name: react-app-build
+            - name: Publish Build Artifacts
+              uses: actions/upload-artifact@v3
+              with:
+                name: react-build-artifacts
+                path: build
 
             
