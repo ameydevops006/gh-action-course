@@ -1,6 +1,6 @@
 name: 04 - Using Actions
 
-on: push
+on: workflow_dispatch
 
 jobs:
     build:
@@ -31,5 +31,3 @@ jobs:
               with:
                 name: react-build-artifacts
                 path: 04-using-actions/react-app/build/
-
-            
