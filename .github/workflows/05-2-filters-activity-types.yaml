@@ -3,7 +3,7 @@ name: 05 -2 - Events Filters - Activity Types
 on: 
     pull_request:
         types: 
-             - closed
+            - closed
         branches:
             - main 
 
