@@ -23,6 +23,7 @@ jobs:
                 echo "Branch: ${{ github.ref }}"
                 echo "Commit SHA: ${{ github.sha }}"
                 echo "Runner OS: ${{ runner.os }}"
+                echo "MY_VAR_WITH_DEFAULT: ${{ env.MY_VAR_WITH_DEFAULT }}"
             
             - name: "{debug} Print when triggered from main"
               if: ${{ inputs.debug && github.ref == 'refs/heads/main' }}
