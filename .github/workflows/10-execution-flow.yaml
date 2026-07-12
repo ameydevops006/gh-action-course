@@ -22,7 +22,7 @@ jobs:
         
         - name: Failing tests
           if: ${{ !inputs.pass-unit-tests }}
-          run: echo "Some unit tests failed."
+          run: exit 1
 
     deploy-nonprod:
       runs-on: ubuntu-latest
