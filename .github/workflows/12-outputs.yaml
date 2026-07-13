@@ -15,7 +15,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     outputs:
-      build-status: ${{steps.build.outputs.status}}
+      build_status: ${{steps.build.outputs.status}}
 
     steps:
       - name: Print GITHUB_OUTPUT
@@ -32,5 +32,5 @@ jobs:
     needs: build
     steps:
       - name: Deploy
-        if: ${{ needs.build.outputs.build-status == 'success' }}
+        if: ${{ needs.build.outputs.build_status == 'success' }}
         run: echo "Deploying"
