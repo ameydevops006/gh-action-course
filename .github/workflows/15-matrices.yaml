@@ -8,12 +8,12 @@ jobs:
   backwards-compatiblity:
     name: ${{ matrix.os }}-${{ matrix.node-version }}
     runs-on: ${{ matrix.os }}
-      strategy:
-        matrix:
-          node-version: [18.x, 20.x , 22.x]
-          os:
-            - ubuntu-latest
-            - windows-latest
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x , 22.x]
+        os:
+          - ubuntu-latest
+          - windows-latest
 
     steps:
       - name : Setup node
