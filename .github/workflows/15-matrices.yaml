@@ -16,9 +16,10 @@ jobs:
             - windows-latest
 
     steps:
-      - name : Setup noe
+      - name : Setup node
         uses: ations/setup-node@v3
-        with: ${{ matrix.node-version }}
+        with: 
+          node-version: ${{ matrix.node-version }}
 
       - name: Perform some test
         run: echo "Running tests on OS ${{ matrix.os }} and NodeJS ${{ matrix.node-version }}"
