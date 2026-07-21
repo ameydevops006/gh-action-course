@@ -15,13 +15,14 @@ jobs:
         os:
           - ubuntu-latest
           - windows-latest
+          
         include:
           - os: ubuntu-latest
             node-version: 24.x
           
-          os: ubuntu-latest
-          node-version: 21.X
-          tag: experimental
+          - os: ubuntu-latest
+            node-version: 21.X
+            tag: experimental
 
     steps:
       - name : Setup node
