@@ -16,6 +16,9 @@ jobs:
           - windows-latest
 
     steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
       - name : Setup node
         uses: ations/setup-node@v3
         with: 
