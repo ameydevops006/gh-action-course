@@ -1,0 +1,6 @@
+name: Update NPM Dependencies
+description: Check if there are any updates to NPM packages , and create a PR with the updated package*.json file
+
+runs:
+  using: node24
+  main: index.js
