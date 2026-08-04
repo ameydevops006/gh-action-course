@@ -6,6 +6,14 @@ on:
       url:
         type: string
         default: 'https://www.google.com'
+      
+      max_trials:
+        default: '10'
+        required: false
+
+      delay:
+        required: false
+        default: '5'
 
       
 jobs:
@@ -18,3 +26,5 @@ jobs:
         uses: ./.github/actions/docker-ping-url
         with:
           url: ${{ inputs.url }}
+          max-trials: ${{ inputs.max_trials }}
+          delay: ${{ inputs.delay }}
