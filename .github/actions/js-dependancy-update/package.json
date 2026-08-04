@@ -11,6 +11,6 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "@actions/core": "^3.0.1"
+    "@actions/core": "^1.11.1"
   }
 }
