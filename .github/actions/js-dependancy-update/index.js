@@ -42,6 +42,7 @@ async function run() {
 
     if (gitStatus.stdout.length > 0) {
         core.info('[js-dependency-update]: There are updates available');
+        await exec.exec('git config --global user.name gh-automation')
     } else {    
         core.info('[js-dependency-update]: No updates available');
     }
