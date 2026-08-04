@@ -2,19 +2,35 @@ name: 17 - 2 - Custom Actions - JS
 run-name: 17 - 2 - Custom Actions - JS
 on: 
   workflow_dispatch:
+    inputs:
 
-env:
-  working-directory: 04-using-actions/react-app
+      base-branch:
+        description: Base branch to compare with
+        required: true
+        type: string
+        default: main
+      
+      target-branch:
+        description: Target branch to create PR
+        required: true
+        type: string
+        default: update-dependencies
+
+      working-directory:
+        description: Working directory where package*.json files are located
+        required: true
+        type: string
+        default: 04-using-actions/react-app
 
 jobs:
   dependency-update:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ${{ env.working-directory }}
     steps:
       - uses: actions/checkout@v4
 
       - name: Check for dependency updates
         uses: ./.github/actions/js-dependancy-update
-       
+        with:
+          base-branch: ${{ inputs.base-branch }}
+          target-branch: ${{ inputs.target-branch }}
+          working-directory: ${{ inputs.working-directory }}
