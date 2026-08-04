@@ -6,7 +6,7 @@ inputs:
     description: URL to ping
     required: true
 
-  max-trials:
+  max_trials:
     description: Maximum number of trials to ping the URL
     required: false
     default: '10'
