@@ -33,7 +33,7 @@ def run():
     max_trials = int(os.getenv("INPUT_MAX_TRIALS"))
     website_reachable = ping_url(website_url, delay, max_trials)
     print (f"Website reachable: {website_reachable}")
-    set_output(os.getenv("GITHUB_OUTPUT"), "website-reachable", {website_reachable})
+    set_output(os.getenv("GITHUB_OUTPUT"), "website-reachable", website_reachable)
     if not website_reachable:
         raise Exception(f"Website {website_url} is not reachable after {max_trials} trials.")
 
