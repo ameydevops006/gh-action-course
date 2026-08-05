@@ -16,6 +16,10 @@ inputs:
     required: false
     default: '5'
 
+outputs:
+  website-reachable:
+    description: Whether the website URL is reachable or not
+
 runs:
   using: docker
   image: Dockerfile
